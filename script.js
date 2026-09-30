@@ -3,18 +3,21 @@
 // PLAN: Write a short pseudocode plan for making a sword here.
 
 document.title = "Blacksmith - The Tiny Forge";
-console.log = "Blacksmith - The Tiny Forge";
+console.log("Blacksmith - The Tiny Forge");
 
 // 1. Select the forge, heat, sword count, status, image, and message elements.
 //    Find their IDs in index.html.
 
-const forge = document.getElementById("#forge");
+const forge = document.getElementById("forge");
 const heat = document.getElementById("heat-value");
 const swordCount = document.getElementById("sword-count");
 const status = document.getElementById("forge-status");
 const image = document.getElementById("forge-image");
 const message = document.getElementById("message-box");
 // 2. Create the two state variables: heat and swords made.
+
+let heatValue = 0;
+let swordsMade = 0;
 
 // 3. Write getForgeStatus(heatValue). Return the correct status string.
 
