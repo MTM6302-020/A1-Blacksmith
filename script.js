@@ -19,6 +19,18 @@ const message = document.getElementById("message-box");
 let heatValue = 0;
 let swordsMade = 0;
 
+function getForgeStatus(heatValue) {
+  if (heatValue < 0) {
+    return "Frozen";
+  } else if (heatValue < 50) {
+    return "Cold";
+  } else if (heatValue < 100) {
+    return "Warm";
+  } else {
+    return "Hot";
+  }
+}
+
 // 3. Write getForgeStatus(heatValue). Return the correct status string.
 
 // 4. Write updateForge(). Update text and apply one status class.
