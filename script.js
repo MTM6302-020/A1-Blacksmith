@@ -31,6 +31,11 @@ function getForgeStatus(heatValue) {
   }
 }
 
+console.log(getForgeStatus(-10));
+console.log(getForgeStatus(25));
+console.log(getForgeStatus(75));
+console.log(getForgeStatus(120));
+
 // 3. Write getForgeStatus(heatValue). Return the correct status string.
 
 // 4. Write updateForge(). Update text and apply one status class.
