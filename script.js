@@ -31,13 +31,9 @@ function getForgeStatus(heatValue) {
   }
 }
 
-console.log(getForgeStatus(-10));
-console.log(getForgeStatus(25));
-console.log(getForgeStatus(75));
-console.log(getForgeStatus(120));
-
 // 3. Write getForgeStatus(heatValue). Return the correct status string.
 
+getForgeStatus(heatValue);
 // 4. Write updateForge(). Update text and apply one status class.
 //    Change the supplied forge image src and alt to match the heat.
 //    Keep the most recent action message visible.
