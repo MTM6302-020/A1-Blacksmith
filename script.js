@@ -16,7 +16,7 @@ const forgeImage = document.getElementById("forge-image");
 const message = document.getElementById("message-box");
 // 2. Create the two state variables: heat and swords made.
 
-let heatValue = 0;
+let heatValue = 20;
 let swordsMade = 0;
 
 // 3. Write getForgeStatus(heatValue). Return the correct status string.
@@ -77,9 +77,9 @@ function heatForge(amount) {
 
 // 7. Write makeSword(). Handle both success and insufficient heat.
 function makeSword() {
-  if (heatValue >= 30) {
+  if (heatValue >= 60) {
     swordsMade++;
-    heatValue -= 30; // Reduce heat by 30
+    heatValue -= 20; // Reduce heat by 20
     message.textContent = "You made a sword!";
   } else {
     message.textContent = "Not enough heat to make a sword.";
