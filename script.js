@@ -21,9 +21,9 @@ let swordsMade = 0;
 
 // 3. Write getForgeStatus(heatValue). Return the correct status string.
 function getForgeStatus(heatValue) {
-  if (heatValue < 30) {
+  if (heatValue < 29) {
     return "Cold";
-  } else if (heatValue < 70) {
+  } else if (heatValue < 69) {
     return "Ready";
   } else {
     return "Roaring";
