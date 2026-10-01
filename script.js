@@ -2,6 +2,9 @@
 
 // PLAN: Write a short pseudocode plan for making a sword here.
 
+// Will create different functions that will help manage the forge
+// heat in order to make swords based on the heat value
+
 document.title = "Blacksmith - The Tiny Forge";
 console.log("Blacksmith - The Tiny Forge");
 
