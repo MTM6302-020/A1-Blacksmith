@@ -34,7 +34,7 @@ function getForgeStatus(heatValue) {
 //    Change the supplied forge image src and alt to match the heat.
 //    Keep the most recent action message visible.
 console.log("forgeImage");
-forgeImage.setAttribute("src", "forge-ready.svg");
+forgeImage.setAttribute("src", "assets/forge-ready.svg");
 forgeImage.setAttribute("alt", "it is ready");
 
 const messageBox = document.getElementById("message-box");
@@ -48,15 +48,15 @@ function updateForge() {
 
   if (heatValue < 29) {
     forgeImage.classList.add("cold");
-    forgeImage.setAttribute("src", "forge-cold.svg");
+    forgeImage.setAttribute("src", "assets/forge-cold.svg");
     forgeImage.setAttribute("alt", "it is cold");
   } else if (heatValue < 69) {
     forgeImage.classList.add("ready");
-    forgeImage.setAttribute("src", "forge-ready.svg");
+    forgeImage.setAttribute("src", "assets/forge-ready.svg");
     forgeImage.setAttribute("alt", "it is ready");
   } else {
     forgeImage.classList.add("roaring");
-    forgeImage.setAttribute("src", "forge-roaring.svg");
+    forgeImage.setAttribute("src", "assets/forge-roaring.svg");
     forgeImage.setAttribute("alt", "it is roaring");
   }
 }
