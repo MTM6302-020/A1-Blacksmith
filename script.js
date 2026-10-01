@@ -16,24 +16,20 @@ const forgeImage = document.getElementById("forge-image");
 const message = document.getElementById("message-box");
 // 2. Create the two state variables: heat and swords made.
 
-let heatValue = 60;
-let swordsMade = 1;
+let heatValue = 0;
+let swordsMade = 0;
 
+// 3. Write getForgeStatus(heatValue). Return the correct status string.
 function getForgeStatus(heatValue) {
-  if (heatValue < 0) {
-    return "Frozen";
-  } else if (heatValue < 50) {
+  if (heatValue < 30) {
     return "Cold";
-  } else if (heatValue < 100) {
-    return "Warm";
+  } else if (heatValue < 70) {
+    return "Ready";
   } else {
-    return "Hot";
+    return "Roaring";
   }
 }
 
-// 3. Write getForgeStatus(heatValue). Return the correct status string.
-
-getForgeStatus(heatValue);
 // 4. Write updateForge(). Update text and apply one status class.
 //    Change the supplied forge image src and alt to match the heat.
 //    Keep the most recent action message visible.
@@ -41,9 +37,32 @@ console.log("forgeImage");
 forgeImage.setAttribute("src", "forge-ready.svg");
 forgeImage.setAttribute("alt", "it is ready");
 
-updateForge();
+const messageBox = document.getElementById("message-box");
+
+function updateForge() {
+  heat.textContent = heatValue;
+  swordCount.textContent = swordsMade;
+  status.textContent = getForgeStatus(heatValue);
+
+  forgeImage.classList.remove("cold", "ready", "roaring");
+
+  if (heatValue < 29) {
+    forgeImage.classList.add("cold");
+    forgeImage.setAttribute("src", "forge-cold.svg");
+    forgeImage.setAttribute("alt", "it is cold");
+  } else if (heatValue < 69) {
+    forgeImage.classList.add("ready");
+    forgeImage.setAttribute("src", "forge-ready.svg");
+    forgeImage.setAttribute("alt", "it is ready");
+  } else {
+    forgeImage.classList.add("roaring");
+    forgeImage.setAttribute("src", "forge-roaring.svg");
+    forgeImage.setAttribute("alt", "it is roaring");
+  }
+}
 
 // 5. Write resetForge(). Restore the state, message, and display.
+resetForge();
 
 // 6. Write heatForge(amount). Add heat, cap it, and update the page.
 
