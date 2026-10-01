@@ -62,12 +62,32 @@ function updateForge() {
 }
 
 // 5. Write resetForge(). Restore the state, message, and display.
-resetForge();
+function resetForge() {
+  heatValue = 0;
+  swordsMade = 0;
+  updateForge();
+}
 
 // 6. Write heatForge(amount). Add heat, cap it, and update the page.
+function heatForge(amount) {
+  heatValue += amount;
+  heatValue = Math.min(heatValue, 100); // Cap at 100
+  updateForge();
+}
 
 // 7. Write makeSword(). Handle both success and insufficient heat.
+function makeSword() {
+  if (heatValue >= 30) {
+    swordsMade++;
+    heatValue -= 30; // Reduce heat by 30
+    message.textContent = "You made a sword!";
+  } else {
+    message.textContent = "Not enough heat to make a sword.";
+  }
+  updateForge();
+}
 
 // 8. Call resetForge() once to start the game.
 
 // Use the tests in ASSIGNMENT.md to check your work.
+resetForge();
