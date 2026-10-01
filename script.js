@@ -75,6 +75,7 @@ function resetForge() {
 function heatForge(amount) {
   heatValue += amount;
   heatValue = Math.min(heatValue, 100); // Cap at 100
+  status.textContent = getForgeStatus(heatValue);
   updateForge();
 }
 
