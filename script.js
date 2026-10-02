@@ -20,7 +20,7 @@ const message = document.getElementById("message-box");
 // 2. Create the two state variables: heat and swords made.
 
 let heatValue = 20;
-let swordsMade = 0;
+let swordsMade = 1;
 
 // 3. Write getForgeStatus(heatValue). Return the correct status string.
 function getForgeStatus(heatValue) {
