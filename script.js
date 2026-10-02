@@ -74,7 +74,7 @@ function resetForge() {
 // 6. Write heatForge(amount). Add heat, cap it, and update the page.
 function heatForge(amount) {
   heatValue += amount;
-  heatValue = Math.min(heatValue, 100); // Cap at 100
+  heatValue = Math.min(heatValue, 100);
   status.textContent = getForgeStatus(heatValue);
   updateForge();
 }
@@ -83,7 +83,7 @@ function heatForge(amount) {
 function makeSword() {
   if (heatValue >= 70) {
     swordsMade += 1;
-    heatValue -= 20; // Reduce heat by 20
+    heatValue -= 20;
     message.textContent = "You made a sword!";
   } else {
     message.textContent = "Not enough heat to make a sword.";
