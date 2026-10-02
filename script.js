@@ -47,12 +47,12 @@ function updateForge() {
   swordCount.textContent = swordsMade;
   status.textContent = getForgeStatus(heatValue);
 
-  forgeImage.classList.remove("cold", "ready", "roaring");
+  forgeImage.classList.remove("too cold", "ready", "roaring");
 
   if (heatValue < 29) {
-    forgeImage.classList.add("cold");
+    forgeImage.classList.add("too cold");
     forgeImage.setAttribute("src", "assets/forge-cold.svg");
-    forgeImage.setAttribute("alt", "it is cold");
+    forgeImage.setAttribute("alt", "it is too cold");
   } else if (heatValue < 69) {
     forgeImage.classList.add("ready");
     forgeImage.setAttribute("src", "assets/forge-ready.svg");
