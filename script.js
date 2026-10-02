@@ -19,13 +19,13 @@ const forgeImage = document.getElementById("forge-image");
 const message = document.getElementById("message-box");
 // 2. Create the two state variables: heat and swords made.
 
-let heatValue = 0;
-let swordsMade = 0;
+let heatValue = 20;
+let swordsMade = 1;
 
 // 3. Write getForgeStatus(heatValue). Return the correct status string.
 function getForgeStatus(heatValue) {
   if (heatValue < 29) {
-    return "Too Cold";
+    return "Cold";
   } else if (heatValue < 69) {
     return "Ready";
   } else {
@@ -47,12 +47,12 @@ function updateForge() {
   swordCount.textContent = swordsMade;
   status.textContent = getForgeStatus(heatValue);
 
-  forgeImage.classList.remove("too cold", "ready", "roaring");
+  forgeImage.classList.remove("cold", "ready", "roaring");
 
   if (heatValue < 29) {
-    forgeImage.classList.add("too cold");
+    forgeImage.classList.add("cold");
     forgeImage.setAttribute("src", "assets/forge-cold.svg");
-    forgeImage.setAttribute("alt", "it is too cold");
+    forgeImage.setAttribute("alt", "it is cold");
   } else if (heatValue < 69) {
     forgeImage.classList.add("ready");
     forgeImage.setAttribute("src", "assets/forge-ready.svg");
