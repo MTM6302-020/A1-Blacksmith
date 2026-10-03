@@ -81,9 +81,9 @@ function heatForge(amount) {
 
 // 7. Write makeSword(). Handle both success and insufficient heat.
 function makeSword() {
-  if (heatValue >= 70) {
+  if (heatValue >= 30) {
     swordsMade++;
-    heatValue -= 20;
+    heatValue -= 30;
     message.textContent = "You made a sword!";
   } else {
     message.textContent = "Not enough heat to make a sword.";
