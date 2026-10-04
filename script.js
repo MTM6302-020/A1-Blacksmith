@@ -20,7 +20,7 @@ const message = document.getElementById("message-box");
 // 2. Create the two state variables: heat and swords made.
 
 let heatValue = 30;
-let swordsMade = 20;
+let swordsMade = 1;
 
 // 3. Write getForgeStatus(heatValue). Return the correct status string.
 function getForgeStatus(heatValue) {
@@ -66,8 +66,8 @@ function updateForge() {
 
 // 5. Write resetForge(). Restore the state, message, and display.
 function resetForge() {
-  heatValue = 30;
-  swordsMade = 20;
+  heatValue = 0;
+  swordsMade = 0;
   updateForge();
 }
 
@@ -81,9 +81,9 @@ function heatForge(amount) {
 
 // 7. Write makeSword(). Handle both success and insufficient heat.
 function makeSword() {
-  if (heatValue >= 30) {
+  if (heatValue >= 70) {
     swordsMade++;
-    heatValue -= 30;
+    heatValue -= 20;
     message.textContent = "You made a sword!";
   } else {
     message.textContent = "Not enough heat to make a sword.";
