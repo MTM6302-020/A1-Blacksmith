@@ -59,12 +59,13 @@ function updateForge() {
     forgeImage.setAttribute("src", "assets/forge-ready.svg");
     forgeImage.setAttribute("alt", "it is ready");
     actionMessage.textContent = "The forge is ready! You can make swords.";
+    color.style.backgroundColor = "#ffbb72"; // Change background color to a faint orange
   } else {
     forgeImage.classList.add("roaring");
     forgeImage.setAttribute("src", "assets/forge-roaring.svg");
     forgeImage.setAttribute("alt", "it is roaring");
     actionMessage.textContent = "The forge is roaring! You can make swords!";
-    color.style.backgroundColor = "#ffa03a"; // Change background color to a fiery orange
+    color.style.backgroundColor = "#ffab50"; // Change background color to a fiery orange
   }
 }
 
