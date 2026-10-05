@@ -63,7 +63,7 @@ function updateForge() {
     forgeImage.setAttribute("src", "assets/forge-roaring.svg");
     forgeImage.setAttribute("alt", "it is roaring");
     actionMessage.textContent = "The forge is roaring! You can make swords!";
-    document.getElementById("forge-top").style.backgroundColor = "#ffa600"; // Change background color to indicate roaring forge
+    document.getElementById("forge-top").style.backgroundColor = "#ffb937"; // Change background color to indicate roaring forge
   }
 }
 
