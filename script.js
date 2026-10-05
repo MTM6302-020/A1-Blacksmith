@@ -52,10 +52,13 @@ function updateForge() {
     forgeImage.classList.add("cold");
     forgeImage.setAttribute("src", "assets/forge-cold.svg");
     forgeImage.setAttribute("alt", "it is cold");
+    actionMessage.textContent =
+      "The forge is cold. You need more heat to make swords.";
   } else if (heatValue < 70) {
     forgeImage.classList.add("ready");
     forgeImage.setAttribute("src", "assets/forge-ready.svg");
     forgeImage.setAttribute("alt", "it is ready");
+    actionMessage.textContent = "The forge is ready! You can make swords.";
   } else {
     forgeImage.classList.add("roaring");
     forgeImage.setAttribute("src", "assets/forge-roaring.svg");
