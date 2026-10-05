@@ -24,9 +24,9 @@ let swordsMade = 1;
 
 // 3. Write getForgeStatus(heatValue). Return the correct status string.
 function getForgeStatus(heatValue) {
-  if (heatValue < 29) {
+  if (heatValue < 30) {
     return "Cold";
-  } else if (heatValue < 69) {
+  } else if (heatValue < 70) {
     return "Ready";
   } else {
     return "Roaring";
@@ -46,11 +46,11 @@ function updateForge() {
 
   forgeImage.classList.remove("cold", "ready", "roaring");
 
-  if (heatValue < 29) {
+  if (heatValue < 30) {
     forgeImage.classList.add("cold");
     forgeImage.setAttribute("src", "assets/forge-cold.svg");
     forgeImage.setAttribute("alt", "it is cold");
-  } else if (heatValue < 69) {
+  } else if (heatValue < 70) {
     forgeImage.classList.add("ready");
     forgeImage.setAttribute("src", "assets/forge-ready.svg");
     forgeImage.setAttribute("alt", "it is ready");
@@ -63,8 +63,8 @@ function updateForge() {
 
 // 5. Write resetForge(). Restore the state, message, and display.
 function resetForge() {
-  // heatValue = 0;
-  // swordsMade = 0;
+  heatValue = 30;
+  swordsMade = 1;
   updateForge();
 }
 
@@ -80,7 +80,7 @@ function heatForge(amount) {
 function makeSword() {
   if (heatValue >= 70) {
     swordsMade++;
-    heatValue -= 20;
+    heatValue -= 30;
     message.textContent = "You made a sword!";
   } else {
     message.textContent = "Not enough heat to make a sword.";
