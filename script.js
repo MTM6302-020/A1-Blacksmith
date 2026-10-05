@@ -60,7 +60,8 @@ function updateForge() {
     forgeImage.classList.add("roaring");
     forgeImage.setAttribute("src", "assets/forge-roaring.svg");
     forgeImage.setAttribute("alt", "it is roaring");
-    color.setAttribute("style", "background-color: yellow");
+    color.setAttribute("style", "background-color: #fad342");
+    actionMessage.textContent = "The forge is roaring! You can make swords!";
   }
 }
 
@@ -91,16 +92,6 @@ function makeSword() {
   }
   updateForge();
 }
-
-let heatButton = document.getElementById("heat-button");
-heatButton.addEventListener("click", function () {
-  heatForge(10);
-});
-
-let makeSwordButton = document.getElementById("make-sword-button");
-makeSwordButton.addEventListener("click", function () {
-  makeSword();
-});
 
 // 8. Call resetForge() once to start the game.
 resetForge();
