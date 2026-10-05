@@ -72,7 +72,7 @@ function updateForge() {
 // 5. Write resetForge(). Restore the state, message, and display.
 resetForge();
 function resetForge() {
-  heatValue = 0;
+  heatValue = 20;
   swordsMade = 0;
   updateForge();
 }
