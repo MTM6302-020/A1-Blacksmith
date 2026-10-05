@@ -17,6 +17,7 @@ const swordCount = document.getElementById("sword-count");
 const status = document.getElementById("forge-status");
 const forgeImage = document.getElementById("forge-image");
 const message = document.getElementById("message-box");
+let color = document.querySelector("forge-top");
 // 2. Create the two state variables: heat and swords made.
 
 let heatValue = 0;
@@ -58,6 +59,7 @@ function updateForge() {
     forgeImage.classList.add("roaring");
     forgeImage.setAttribute("src", "assets/forge-roaring.svg");
     forgeImage.setAttribute("alt", "it is roaring");
+    color = "yellow";
   }
 }
 
@@ -87,6 +89,16 @@ function makeSword() {
   }
   updateForge();
 }
+
+let heatButton = document.getElementById("heat-button");
+heatButton.addEventListener("click", function () {
+  heatForge(10);
+});
+
+let makeSwordButton = document.getElementById("make-sword-button");
+makeSwordButton.addEventListener("click", function () {
+  makeSword();
+});
 
 // 8. Call resetForge() once to start the game.
 resetForge();
