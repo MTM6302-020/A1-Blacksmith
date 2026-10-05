@@ -40,12 +40,9 @@ console.log("forgeImage");
 forgeImage.setAttribute("src", "assets/forge-ready.svg");
 forgeImage.setAttribute("alt", "it is ready");
 
-const messageBox = document.getElementById("message-box");
-
 function updateForge() {
   heat.textContent = heatValue;
   swordCount.textContent = swordsMade;
-  status.textContent = getForgeStatus(heatValue);
 
   forgeImage.classList.remove("cold", "ready", "roaring");
 
@@ -66,8 +63,8 @@ function updateForge() {
 
 // 5. Write resetForge(). Restore the state, message, and display.
 function resetForge() {
-  heatValue = 0;
-  swordsMade = 0;
+  // heatValue = 0;
+  // swordsMade = 0;
   updateForge();
 }
 
