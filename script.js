@@ -18,6 +18,7 @@ const status = document.getElementById("forge-status");
 const forgeImage = document.getElementById("forge-image");
 const message = document.getElementById("message-box");
 const actionMessage = document.getElementById("action-message");
+const color = document.querySelector(".forge-top");
 // 2. Create the two state variables: heat and swords made.
 
 let heatValue = 0;
@@ -63,7 +64,7 @@ function updateForge() {
     forgeImage.setAttribute("src", "assets/forge-roaring.svg");
     forgeImage.setAttribute("alt", "it is roaring");
     actionMessage.textContent = "The forge is roaring! You can make swords!";
-    document.getElementById("forge-top").style.backgroundColor = "#ffb937"; // Change background color to indicate roaring forge
+    color.style.backgroundColor = "#ffa03a"; // Change background color to a fiery orange
   }
 }
 
