@@ -19,8 +19,8 @@ const forgeImage = document.getElementById("forge-image");
 const message = document.getElementById("message-box");
 // 2. Create the two state variables: heat and swords made.
 
-let heatValue = 30;
-let swordsMade = 1;
+let heatValue = 0;
+let swordsMade = 0;
 
 // 3. Write getForgeStatus(heatValue). Return the correct status string.
 function getForgeStatus(heatValue) {
@@ -63,8 +63,8 @@ function updateForge() {
 
 // 5. Write resetForge(). Restore the state, message, and display.
 function resetForge() {
-  heatValue = 30;
-  swordsMade = 1;
+  heatValue = 0;
+  swordsMade = 0;
   updateForge();
 }
 
