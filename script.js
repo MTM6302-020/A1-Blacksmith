@@ -17,7 +17,8 @@ const swordCount = document.getElementById("sword-count");
 const status = document.getElementById("forge-status");
 const forgeImage = document.getElementById("forge-image");
 const message = document.getElementById("message-box");
-let color = document.querySelector("forge-top");
+const actionMessage = document.getElementById("action-message");
+const color = document.querySelector("forge-top");
 // 2. Create the two state variables: heat and swords made.
 
 let heatValue = 0;
@@ -59,7 +60,7 @@ function updateForge() {
     forgeImage.classList.add("roaring");
     forgeImage.setAttribute("src", "assets/forge-roaring.svg");
     forgeImage.setAttribute("alt", "it is roaring");
-    color = "yellow";
+    color.setAttribute("style", "background-color: yellow");
   }
 }
 
@@ -75,6 +76,7 @@ function heatForge(amount) {
   heatValue += amount;
   heatValue = Math.min(heatValue, 100);
   status.textContent = getForgeStatus(heatValue);
+  actionMessage.textContent = `You added ${amount} heat to the forge.`;
   updateForge();
 }
 
@@ -83,9 +85,9 @@ function makeSword() {
   if (heatValue >= 70) {
     swordsMade++;
     heatValue -= 30;
-    message.textContent = "You made a sword!";
+    actionMessage.textContent = "You made a sword!";
   } else {
-    message.textContent = "Not enough heat to make a sword.";
+    actionMessage.textContent = "Not enough heat to make a sword.";
   }
   updateForge();
 }
